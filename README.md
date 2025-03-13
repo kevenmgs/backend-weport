@@ -7,7 +7,7 @@ Instalación y Configuración
 - Abrir una terminal de windows y acceder a la carpeta donde se clono el proyecto **Ejemplo: cd documents/backend-weport**
 - Crear un entorno virtual, ejecutar el siguiente comando:
   **python -m venv venv**
-. Activar el entorno virtual, ejecuta el comando:
+- Activar el entorno virtual, ejecuta el comando:
   **.\venv\Scripts\activate**
 - Instala sqlalchemy, ejecuta el comando: **pip install sqlalchemy**
 - Instala pymysql, ejecuta el comando: **pip install pymysql**

@@ -29,14 +29,21 @@ def get_users(db: Session = Depends(get_db)):
 def get_user(user_id: int, db: Session = Depends(get_db)):
     return db.query(User).filter(User.id == user_id).first()
 
-@router.get("/user_email/{user_email}")
+@router.post("/user_email/{user_email}")
 def get_user(user_email: str, db: Session = Depends(get_db)):
     user = db.query(User.id).filter(User.email == user_email).first()
-    if user:
+    
+    if not user:
         return {
-            "id": user.id,
+            "id": None,
+            "message": "Correo electrónico no registrado"
         }
-    return {"error": "User not found"}
+    
+    return {
+        "id": user.id,
+        "message": "Se generó el QR exitosamente"
+    }
+
 
 
 @router.get("/contact_information/{user_id}")

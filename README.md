@@ -14,4 +14,4 @@ Instalación y Configuración
 - Instala pyjwt, ejecuta el comando: **pip install pyjwt**
 - En el archivo database.py, buscar la linea: DATABASE_URL = **mysql+pymysql://root:""@localhost/weport**
 - **Modificar @localhost/weport reemplazándolo por el servidor y el nombre de la base de datos utilizados. En este caso, el servidor es @localhost y el nombre de la base de datos es weport.**
-- Iniciar el servidor FastAPI , ejecuta el comando: uvicorn app.main:app --reload
+- Iniciar el servidor FastAPI , ejecuta el comando: **uvicorn app.main:app --reload**
